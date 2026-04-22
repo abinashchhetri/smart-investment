@@ -19,7 +19,7 @@ import NavItems from "./NavItems";
 
 const UserDropdown = () => {
     const router = useRouter()
-    const handleSignOUt = async () => {
+    const handleSignOut = async () => {
         router.push("/sign-in")
     }
 
@@ -60,7 +60,7 @@ const UserDropdown = () => {
        
     <DropdownMenuSeparator className="bg-gray-600"/>
 
-    <DropdownMenuItem onClick={handleSignOUt} className="text-gray-100 text-md cursor-pointer focus:bg-transparent focus:text-yellow-500 transition-colors">
+    <DropdownMenuItem onClick={handleSignOut} className="text-gray-100 text-md cursor-pointer focus:bg-transparent focus:text-yellow-500 transition-colors">
          
          <LogOut className="h-4 w-4 mr-2 hidden sm:block"/>
 
