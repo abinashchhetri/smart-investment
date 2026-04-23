@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
+import type { ReactNode } from "react";
 
-const Layout = ({ children }: { children : React.ReactNode }) => {
+const Layout = ({ children }: { children : ReactNode }) => {
     return (
         <main className="auth-layout">
             <section className="auth-left-section scrollbar-hide-default">
