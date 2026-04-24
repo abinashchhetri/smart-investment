@@ -16,14 +16,15 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { LogOut } from "lucide-react";
 import NavItems from "./NavItems";
+import {signOut} from "@/lib/actions/auth.actions";
 
-const UserDropdown = () => {
+const UserDropdown = ({ user }: {user: User}) => {
     const router = useRouter()
     const handleSignOut = async () => {
-        router.push("/sign-in")
+         await signOut();
+        router.push("/sign-in");
     }
 
-    const user = {name : "Jashudha" , email : "jashu@gmail.com"}
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -63,7 +64,7 @@ const UserDropdown = () => {
     <DropdownMenuItem onClick={handleSignOut} className="text-gray-100 text-md cursor-pointer focus:bg-transparent focus:text-yellow-500 transition-colors">
          
          <LogOut className="h-4 w-4 mr-2 hidden sm:block"/>
-
+         Log out
     </DropdownMenuItem>
 
 

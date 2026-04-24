@@ -11,7 +11,7 @@ const NavItems = () => {
 
   return (
     <ul className="flex flex-col sm:flex-row p-2 gap-3 sm:gap-10 font-medium">
-      {NAV_ITEMS.map(({ href, title }) => (
+      {NAV_ITEMS.map(({ href, label }) => (
         <li key={href}>
           <Link
             href={href}
@@ -19,7 +19,7 @@ const NavItems = () => {
               isActive(href) ? "text-green-100" : ""
             }`}
           >
-            {title}
+            {label}
           </Link>
         </li>
       ))}
